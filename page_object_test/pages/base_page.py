@@ -14,7 +14,10 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)
 
-    def is_element_presented(self, how, what):
+    def get(self, link):
+        self.browser.get(link)
+
+    def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
         except NoSuchElementException:
@@ -43,4 +46,12 @@ class BasePage:
         link.click()
 
     def should_be_login_link(self):
-        assert self.is_element_presented(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
+
+    def go_to_basket_page(self):
+        self.browser.find_element(*BasePageLocators.BASKET_BUTTON).click()
+

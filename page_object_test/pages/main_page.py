@@ -1,7 +1,6 @@
-from selenium.webdriver.common.by import By
 from page_object_test.pages.base_page import BasePage
 from .locators import BasePageLocators
-from .login_page import LoginPage
+
 
 class MainPage(BasePage):
 
@@ -12,6 +11,6 @@ class MainPage(BasePage):
         # return LoginPage(browser=self.browser, url=self.browser.current_url)
 
     def should_be_login_link(self):
-        assert self.is_element_presented(*BasePageLocators.LOGIN_LINK)
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK)
         self.browser.find_element(*BasePageLocators.LOGIN_LINK)
 
