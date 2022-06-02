@@ -2,7 +2,7 @@ import time
 
 import pytest
 
-from PageObjectTest.pages.product_page import ProductPage
+from page_object_test.pages.product_page import ProductPage
 
 @pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",

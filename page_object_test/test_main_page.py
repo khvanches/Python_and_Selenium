@@ -1,6 +1,6 @@
 import pytest
-from PageObjectTest.pages.main_page import MainPage
-from PageObjectTest.pages.login_page import LoginPage
+from page_object_test.pages.main_page import MainPage
+from page_object_test.pages.login_page import LoginPage
 
 
 @pytest.mark.smoke

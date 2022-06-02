@@ -1,6 +1,6 @@
 from selenium.common.exceptions import NoAlertPresentException
-from PageObjectTest.pages.base_page import BasePage
-from PageObjectTest.pages.locators import CatalogPageLocators
+from page_object_test.pages.base_page import BasePage
+from page_object_test.pages.locators import CatalogPageLocators
 import math
 
 

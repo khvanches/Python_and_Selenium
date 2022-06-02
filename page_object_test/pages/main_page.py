@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from PageObjectTest.pages.base_page import BasePage
+from page_object_test.pages.base_page import BasePage
 from .locators import BasePageLocators
 from .login_page import LoginPage
 
