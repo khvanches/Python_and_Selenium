@@ -1,6 +1,7 @@
 # Description
 
-<p>The following repo related to UI testing with Python and Selenium.
+<p>The following repo related to UI testing with Python and Selenium based on
+course <a href="https://stepik.org/course/575/syllabus">Stepik: Automation Testing</a>.
 The repo contains two projects:
 <ul>
     <li><strong>simple_shop_test</strong> - just a simple test of a shop. The main idea is to
