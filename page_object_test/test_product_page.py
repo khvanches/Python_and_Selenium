@@ -20,7 +20,6 @@ from page_object_test.pages.login_page import LoginPage
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
 def test_guest_can_add_product_to_basket(browser, link):
-    # link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/?promo=newYear2019"
     page = ProductPage(browser, link)
     page.open()
     page.append_to_basket()
@@ -74,6 +73,7 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     page = BasketPage(browser, browser.current_url)
     page.basket_page_is_empty()
 
+
 @pytest.mark.need_review
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/"
@@ -114,4 +114,3 @@ class TestUserAddToBasketFromProductPage:
         page = ProductPage(browser, link)
         page.open()
         page.should_not_be_success_message()
-
